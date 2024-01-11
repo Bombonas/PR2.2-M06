@@ -1,8 +1,14 @@
 package com.project;
 
-public class Ciutat {
-    long ciutatId;
-    String nom;
-    String pais;
-    int codiPostal;
+import java.io.Serializable;
+
+public class Ciutat implements Serializable{
+    private long ciutatId;
+    private String nom;
+    private String pais;
+    private int codiPostal;
+
+    public Ciutat() {}
+
+    
 }
