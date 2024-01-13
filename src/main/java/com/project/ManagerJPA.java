@@ -14,7 +14,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class Manager {
+public class ManagerJPA {
 
     private static SessionFactory factory; 
     
@@ -36,13 +36,13 @@ public class Manager {
         factory.close();
     }
   
-    public static Ciutat addCiutat(String nom, String pais, int codiPostal) {
+    public static Ciutat2 addCiutat(String nom, String pais, int codiPostal) {
         Session session = factory.openSession();
         Transaction tx = null;
-        Ciutat result = null;
+        Ciutat2 result = null;
         try {
             tx = session.beginTransaction();
-            result = new Ciutat(nom, pais, codiPostal);
+            result = new Ciutat2(nom, pais, codiPostal);
             session.save(result);
             tx.commit();
         } catch (HibernateException e) {
@@ -55,13 +55,13 @@ public class Manager {
         return result;
     }
 
-    public static Ciutada addCiutada(long ciutatId, String nom, String cognom, int edat) {
+    public static Ciutada2 addCiutada(long ciutatId, String nom, String cognom, int edat) {
         Session session = factory.openSession();
         Transaction tx = null;
-        Ciutada result = null;
+        Ciutada2 result = null;
         try {
             tx = session.beginTransaction();
-            result = new Ciutada(ciutatId, nom, cognom, edat);
+            result = new Ciutada2(ciutatId, nom, cognom, edat);
             session.save(result);
             tx.commit();
         } catch (HibernateException e) {

@@ -5,13 +5,14 @@
         <meta attribute = "class-description">
             This class contains the Ciutat detail. 
         </meta>
-        <id name = "CiutatId" type = "long" column = "CiutatId">
-            <generator class="native"/>
+        <id name="ciutatId" type="long" column="ciutat_id">
+            <generator class="native" />
         </id>
-        <property name = "type" column = "type" type = "string"/>
-        <set name="items" cascade="all">
-            <key column="CiutatId"/>
-            <one-to-many class="com.project.Item"/>
-        </set>
+
+        <property name="nom" type="string" column="nom"></property>
+
+        <property name="pais" type="string" column="pais"></property>
+
+        <property name="codiPostal" type="int" column="codi_postal"></property>
    </class>
 </hibernate-mapping>
