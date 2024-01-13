@@ -29,11 +29,11 @@ public class MainJPA {
       Ciutat2 ciu1 = ManagerJPA.addCiutat("Växjö", "Suècia", 35220);
       Ciutat2 ciu2 = ManagerJPA.addCiutat("Kyoto", "Canada", 5200461);
 
-      Ciutada2 ciutada1 = ManagerJPA.addCiutada(ciu0.getCiutatId(), "Jotaro", "Kujoh", 40);
+      ManagerJPA.addCiutada(ciu0.getCiutatId(), "Jotaro", "Kujoh", 40);
       Ciutada2 ciutada2 = ManagerJPA.addCiutada(ciu0.getCiutatId(), "Joseph", "Joestar", 70);
-      Ciutada2 ciutada3 = ManagerJPA.addCiutada(ciu1.getCiutatId(), "Dio", "Brando", 160);
+      ManagerJPA.addCiutada(ciu1.getCiutatId(), "Dio", "Brando", 160);
       Ciutada2 ciutada4 = ManagerJPA.addCiutada(ciu1.getCiutatId(), "Giorno", "Giovanna", 20);
-      Ciutada2 ciutada5 = ManagerJPA.addCiutada(ciu2.getCiutatId(), "Josuke", "Higashikata", 16);
+      ManagerJPA.addCiutada(ciu2.getCiutatId(), "Josuke", "Higashikata", 16);
       Ciutada2 ciutada6 = ManagerJPA.addCiutada(ciu2.getCiutatId(), "Jolyne", "Kujoh", 20);
          
       Collection<?> ciutats = ManagerJPA.listCollection(Ciutat2.class, "");
@@ -49,9 +49,9 @@ public class MainJPA {
       }
 
 
-      ManagerJPA.delete(Ciutada2.class, pep1.getCiutadaId());
-      ManagerJPA.delete(Ciutada2.class, pep3.getCiutadaId());
-      ManagerJPA.delete(Ciutada2.class, pep5.getCiutadaId());
+      ManagerJPA.delete(Ciutada2.class, ciutada2.getCiutadaId());
+      ManagerJPA.delete(Ciutada2.class, ciutada4.getCiutadaId());
+      ManagerJPA.delete(Ciutada2.class, ciutada6.getCiutadaId());
       ManagerJPA.delete(Ciutat2.class, ciu1.getCiutatId());
 
 

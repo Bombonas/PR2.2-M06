@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Table(name = "Ciutat2")
 public class Ciutat2 implements Serializable{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ciutatid", unique = true, nullable = false)
     private long ciutatId;
 

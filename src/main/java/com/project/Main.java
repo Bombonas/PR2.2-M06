@@ -30,12 +30,12 @@ public class Main {
       Ciutat ciu2 = Manager.addCiutat("Kyoto", "Canada", 5200461);
 
 
-      Manager.addCiutada(ciu0.getCiutatId(), "Tony", "Happy", 20);
-      Ciutada pep1 = Manager.addCiutada(ciu1.getCiutatId(), "Monica", "Mouse", 22);
-      Manager.addCiutada(ciu1.getCiutatId(), "Eirika", "Erjo", 44);
-      Ciutada pep3 = Manager.addCiutada(ciu1.getCiutatId(), "Ven", "Enrison", 48);
-      Manager.addCiutada(ciu2.getCiutatId(), "Akira", "Akiko", 62);
-      Ciutada pep5 = Manager.addCiutada(ciu2.getCiutatId(), "Masako", "Kubo", 66);
+      Manager.addCiutada(ciu0.getCiutatId(), "Jotaro", "Kujoh", 40);
+      Ciutada ciutada2 = Manager.addCiutada(ciu0.getCiutatId(), "Joseph", "Joestar", 70);
+      Manager.addCiutada(ciu1.getCiutatId(), "Dio", "Brando", 160);
+      Ciutada ciutada4 = Manager.addCiutada(ciu1.getCiutatId(), "Giorno", "Giovanna", 20);
+      Manager.addCiutada(ciu2.getCiutatId(), "Josuke", "Higashikata", 16);
+      Ciutada ciutada6 = Manager.addCiutada(ciu2.getCiutatId(), "Jolyne", "Kujoh", 20);
          
       Collection<?> ciutats = Manager.listCollection(Ciutat.class, "");
       for(Object obj: ciutats) {
@@ -50,9 +50,9 @@ public class Main {
       }
 
 
-      Manager.delete(Ciutada.class, pep1.getCiutadaId());
-      Manager.delete(Ciutada.class, pep3.getCiutadaId());
-      Manager.delete(Ciutada.class, pep5.getCiutadaId());
+      Manager.delete(Ciutada.class, ciutada2.getCiutadaId());
+      Manager.delete(Ciutada.class, ciutada4.getCiutadaId());
+      Manager.delete(Ciutada.class, ciutada6.getCiutadaId());
       Manager.delete(Ciutat.class, ciu1.getCiutatId());
 
 
